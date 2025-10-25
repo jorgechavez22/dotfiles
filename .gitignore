@@ -1,0 +1,19 @@
+# Nix flakes
+result
+result-*
+.direnv/
+
+# Nix build outputs
+/result
+
+# Secrets (NUNCA commitear)
+modules/secrets.nix
+*.secret
+*.secret.nix
+.env
+.env.local
+.env.*.local
+
+# Local overrides
+local.nix
+*-local.nix
