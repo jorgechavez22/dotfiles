@@ -19,13 +19,22 @@
     # fd                   # find más fácil
     # fzf                  # Fuzzy finder
 
+    # === Claude AI ===
+    claude-code # Agentic coding tool en terminal
+
+    # === Fuentes ===
+    nerd-fonts.jetbrains-mono
+
     # === Desarrollo ===
     # git
     # neovim
     # vscode
 
     # === Lenguajes de programación ===
-    nodejs # Node.js LTS (global, para proyectos sin flake)
+    nodejs_22 # Node.js LTS (global, para proyectos sin flake)
+    # nodePackages.firebase-tools
+    nodePackages.pm2
+    nodePackages.typescript
     # python3
     # go
     # rustup

@@ -15,6 +15,10 @@
         # Nix
         jnoortheen.nix-ide
 
+        # JavaScript/TypeScript
+        esbenp.prettier-vscode
+        editorconfig.editorconfig
+
         # Icons
         vscode-icons-team.vscode-icons
 
@@ -39,6 +43,12 @@
         "workbench.iconTheme" = "vscode-icons";
         "window.restoreWindows" = "none";
         "editor.minimap.enabled" = false;
+        "explorer.compactFolders" = false;  # Mostrar carpetas en árbol, no compactadas
+
+        # Fuente
+        "editor.fontFamily" = "JetBrainsMono Nerd Font Mono";
+        "editor.fontLigatures" = true;  # Activar ligaduras
+        "editor.fontSize" = 14;  # Tamaño opcional
 
         # Terminal integrado
         "terminal.integrated.defaultProfile.linux" = "zsh";
@@ -71,6 +81,15 @@
           "editor.defaultFormatter" = "jnoortheen.nix-ide";
           "editor.formatOnSave" = true;
           "editor.tabSize" = 2;
+        };
+
+        # Formateo para JavaScript y TypeScript
+        "[javascript]" = {
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        };
+
+        "[typescript]" = {
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
         };
 
         # Configuración de direnv
