@@ -28,11 +28,9 @@
 
       # NOTA: Extensiones no disponibles en nixpkgs (instalar manualmente):
       # - anthropic.claude-code (Claude Code)
-      # - shd101wyy.markdown-preview-enhanced (Markdown Preview Enhanced)
       #
       # Para instalarlas manualmente:
       # code --install-extension anthropic.claude-code
-      # code --install-extension shd101wyy.markdown-preview-enhanced
 
       # Configuración de VSCode (settings.json)
       userSettings = {
@@ -43,12 +41,12 @@
         "workbench.iconTheme" = "vscode-icons";
         "window.restoreWindows" = "none";
         "editor.minimap.enabled" = false;
-        "explorer.compactFolders" = false;  # Mostrar carpetas en árbol, no compactadas
+        "explorer.compactFolders" = false; # Mostrar carpetas en árbol, no compactadas
 
         # Fuente
         "editor.fontFamily" = "JetBrainsMono Nerd Font Mono";
-        "editor.fontLigatures" = true;  # Activar ligaduras
-        "editor.fontSize" = 14;  # Tamaño opcional
+        "editor.fontLigatures" = true; # Activar ligaduras
+        "editor.fontSize" = 14; # Tamaño opcional
 
         # Terminal integrado
         "terminal.integrated.defaultProfile.linux" = "zsh";
@@ -93,11 +91,11 @@
         };
 
         # Configuración de direnv
-        "direnv.restart.automatic" = true;  # Reinicia automáticamente cuando .envrc cambia
-        "direnv.path.executable" = "direnv";  # Usa el direnv de tu PATH
+        "direnv.restart.automatic" = true; # Reinicia automáticamente cuando .envrc cambia
+        "direnv.path.executable" = "direnv"; # Usa el direnv de tu PATH
 
         # Asegurar que las terminales integradas usen el entorno de direnv
-        "terminal.integrated.inheritEnv" = true;  # Heredar variables del workspace
+        "terminal.integrated.inheritEnv" = true; # Heredar variables del workspace
 
         # Opcional: Más configuraciones útiles
         # "editor.formatOnSave" = true;

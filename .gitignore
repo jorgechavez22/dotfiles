@@ -17,3 +17,6 @@ modules/secrets.nix
 # Local overrides
 local.nix
 *-local.nix
+
+# Claude code
+.claude/
