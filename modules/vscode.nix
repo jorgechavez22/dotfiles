@@ -8,10 +8,6 @@
     profiles.default = {
       # Extensiones instaladas (solo las disponibles en nixpkgs)
       extensions = with pkgs.vscode-extensions; [
-        # Dart & Flutter
-        dart-code.dart-code
-        dart-code.flutter
-
         # Nix
         jnoortheen.nix-ide
 
@@ -34,9 +30,6 @@
 
       # Configuración de VSCode (settings.json)
       userSettings = {
-        # Flutter
-        "dart.flutterSdkPath" = "/home/jorge/development/flutter";
-
         # Apariencia
         "workbench.iconTheme" = "vscode-icons";
         "window.restoreWindows" = "none";

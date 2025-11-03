@@ -7,8 +7,6 @@ Mi colección personal de archivos de configuración para Linux, gestionada con 
 Configuraciones actuales:
 - **Home Manager** - Gestión declarativa de dotfiles y paquetes de usuario
 - **Nix Flakes** - Entorno de desarrollo reproducible
-- **Hyprland** - Window manager (Wayland)
-- **Waybar** - Barra de estado
 
 ## 🚀 Instalación
 
@@ -16,8 +14,6 @@ Configuraciones actuales:
 
 - Nix instalado en tu sistema
 - Daemon de Nix habilitado: `sudo systemctl enable --now nix-daemon`
-
-> **Nota:** La configuración de Nix se puede hacer a nivel usuario (`~/.config/nix/nix.conf`) o sistema (`/etc/nix/nix.conf`). Usaremos nivel usuario para mantener todo portable en dotfiles.
 
 ### Pasos
 
@@ -29,15 +25,9 @@ Configuraciones actuales:
 
 2. **Configurar Nix Flakes** (primera vez):
    ```bash
-   # Crear link simbólico para configuración de Nix (nivel usuario)
+   # Crear link simbólico para configuración de Nix con flake (nivel usuario)
    mkdir -p ~/.config/nix
    ln -sf ~/dotfiles/.config/nix/nix.conf ~/.config/nix/nix.conf
-
-   # Asegurar que el daemon de Nix esté corriendo
-   sudo systemctl enable --now nix-daemon
-
-   # Reiniciar daemon para que tome la configuración
-   sudo systemctl restart nix-daemon
 
    # Verificar que flakes está habilitado
    nix flake show ~/dotfiles
