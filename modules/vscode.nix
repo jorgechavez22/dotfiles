@@ -55,13 +55,13 @@
               "command" = [ "nixfmt" ];
             };
             "nixpkgs" = {
-              # Usa nixpkgs de tu flake en lugar de NIX_PATH
-              "expr" = "import (builtins.getFlake \"/home/jorge/dotfiles\").inputs.nixpkgs { }";
+              # Usa nixpkgs de tu flake en lugar de NIX_PATH (dinámico)
+              "expr" = "import (builtins.getFlake \"${config.home.homeDirectory}/dotfiles\").inputs.nixpkgs { }";
             };
             "options" = {
-              # Opciones de Home Manager para mejor autocompletado
+              # Opciones de Home Manager para mejor autocompletado (dinámico)
               "home-manager" = {
-                "expr" = "(builtins.getFlake \"/home/jorge/dotfiles\").homeConfigurations.jorge.options";
+                "expr" = "(builtins.getFlake \"${config.home.homeDirectory}/dotfiles\").homeConfigurations.${config.home.username}.options";
               };
             };
           };

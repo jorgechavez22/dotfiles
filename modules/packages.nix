@@ -13,13 +13,13 @@
     nix-index # Buscar archivos en nixpkgs
 
     # === Claude AI ===
-    claude-code # Agentic coding tool en terminal
+    # claude-code # Agentic coding tool en terminal
 
     # === Fuentes ===
-    nerd-fonts.jetbrains-mono
+    # nerd-fonts.jetbrains-mono
 
     # === Lenguajes de programación ===
-    nodejs_22 # Node.js LTS (global, para proyectos sin flake)
+    nodejs_22
     nodePackages.typescript
   ];
 }

@@ -1,4 +1,4 @@
-{ ... }:
+{ config, lib, ... }:
 
 {
   # Configuración de Zsh con oh-my-zsh
@@ -40,10 +40,10 @@
       la = "ls -A";
       l = "ls -CF";
 
-      # Aliases de Nix
+      # Aliases de Nix (usa el username dinámico)
       nix-update = "nix flake update ~/dotfiles";
-      home-switch = "home-manager switch --flake ~/dotfiles#jorge";
-      home-build = "home-manager build --flake ~/dotfiles#jorge";
+      home-switch = "home-manager switch --flake ~/dotfiles#${config.home.username}";
+      home-build = "home-manager build --flake ~/dotfiles#${config.home.username}";
 
       # Git shortcuts
       gs = "git status";
@@ -58,8 +58,8 @@
       # Flutter se gestiona ahora por Nix (no necesita PATH adicional)
     };
 
-    # Configuración adicional en initExtra
-    initExtra = ''
+    # Configuración adicional (nueva sintaxis - reemplaza initExtra)
+    initContent = lib.mkOrder 1200 ''
       # Configuraciones personalizadas adicionales
 
       # Historial mejorado

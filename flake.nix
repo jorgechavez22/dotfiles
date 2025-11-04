@@ -20,18 +20,28 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+
+      # Función para crear configuración de usuario
+      mkHomeConfiguration = username: home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home.nix
+          {
+            home.username = username;
+            home.homeDirectory = "/home/${username}";
+          }
+        ];
+      };
     in
     {
       # Configuración de Home Manager
       homeConfigurations = {
-        # Reemplaza "jorge" con tu nombre de usuario
-        jorge = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+        # Configuración específica por usuario
+        tristeza = mkHomeConfiguration "tristeza";
+        jorge = mkHomeConfiguration "jorge";
 
-          modules = [
-            ./home.nix
-          ];
-        };
+        # Puedes agregar más usuarios fácilmente
+        # otrousuario = mkHomeConfiguration "otrousuario";
       };
     };
 }

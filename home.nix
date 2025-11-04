@@ -6,15 +6,13 @@
     ./modules/packages.nix
     ./modules/shell.nix
     ./modules/git.nix
-    ./modules/vscode.nix
+    # ./modules/vscode.nix - Deshabilitado: En WSL2 se usa VSCode desde Windows con Remote-WSL
   ];
 
   # Permitir paquetes unfree (necesario para VSCode)
   nixpkgs.config.allowUnfree = true;
 
-  # IMPORTANTE: Cambia esto a tu información
-  home.username = "jorge";
-  home.homeDirectory = "/home/jorge";
+  # NOTA: home.username y home.homeDirectory se definen dinámicamente en flake.nix
 
   # Versión de Home Manager (no cambiar a menos que sepas lo que haces)
   home.stateVersion = "24.11";
