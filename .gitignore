@@ -1,22 +1,8 @@
-# Nix flakes
-result
-result-*
-.direnv/
-
-# Nix build outputs
-/result
-
-# Secrets (NUNCA commitear)
-modules/secrets.nix
+# Secrets
 *.secret
-*.secret.nix
 .env
 .env.local
 .env.*.local
 
-# Local overrides
-local.nix
-*-local.nix
-
-# Claude code
+# Claude
 .claude/
