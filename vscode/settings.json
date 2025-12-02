@@ -6,36 +6,12 @@
   "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "nix.enableLanguageServer": true,
-  "nix.serverPath": "nixd",
-  "nix.serverSettings": {
-    "nixd": {
-      "formatting": {
-        "command": ["nixfmt"]
-      },
-      "nixpkgs": {
-        "expr": "import (builtins.getFlake \"/home/jorge/dotfiles\").inputs.nixpkgs { }"
-      },
-      "options": {
-        "home-manager": {
-          "expr": "(builtins.getFlake \"/home/jorge/dotfiles\").homeConfigurations.jorge.options"
-        }
-      }
-    }
-  },
-  "[nix]": {
-    "editor.defaultFormatter": "jnoortheen.nix-ide",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
-  },
+  "terminal.integrated.defaultProfile.linux": "zsh",  
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "direnv.restart.automatic": true,
-  "direnv.path.executable": "direnv",
+  },  
   "terminal.integrated.inheritEnv": true
 }

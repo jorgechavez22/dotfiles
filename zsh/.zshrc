@@ -61,3 +61,13 @@ setopt CORRECT
 # ============================================
 
 export EDITOR='nvim'
+
+# fnm
+FNM_PATH="/home/jorge/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --use-on-cd --shell zsh)"
+fi
+
+# uv
+. "$HOME/.local/share/../bin/env"
